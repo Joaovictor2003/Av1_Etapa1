@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de candidatos</title>
+    <link rel="stylesheet" href="style.css">    
+    <script src="script.js" defer></script>
+</head>
+<body>
+<h1>Registro de Candidatos</h1>
+
+    <div class="form-group">
+        <label for="txtNumeroPartido">Número do Partido:</label>
+        <input type="text" id="txtNumeroPartido" placeholder="Digite o número (ex: 94)" maxlength="2" inputmode="numeric" onchange="processarPartido()">
+        <span id="msgErroPartido" class="erro"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Nome do Partido:</label>
+        <span id="lblNomePartido"><b>---</b></span>
+    </div>
+
+    <div class="form-group">
+        <label for="lstCandidatos">Candidato:</label>
+        <select id="lstCandidatos" size="5" onchange="selecionarCandidato()">
+            <!-- Opções populadas via JS -->
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="lstCargos">Cargo a Concorrer:</label>
+        <select id="lstCargos" size="5">
+            <option value="Presidente">Presidente</option>
+            <option value="Governador(a)">Governador(a)</option>
+            <option value="Senador(a)">Senador(a)</option>
+            <option value="Deputado(a) Federal">Deputado(a) Federal</option>
+            <option value="Deputado(a) Estadual">Deputado(a) Estadual</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="txtNumeroCandidato">Número do Candidato:</label>
+        <input type="text" id="txtNumeroCandidato" placeholder="Informe o número do candidato" maxlength="5" inputmode="numeric">
+<span class="rules">
+Regras: XX - Presidente/Governador(a); XXn - Senador(a); XXnn - Dep. Fed.; XXnnn - Dep. Est.</span>
+        <span id="msgErroNumero" class="erro"></span>
+    </div>
+
+    <!-- Botões de ação solicitados -->
+    <div class="actions">
+        <button type="button" class="btn-primary" onclick="registrarCandidatura()">Registrar Candidatura</button>
+        <button type="button" class="btn-success" onclick="gravarEEnviarTSE()">Gravar e Enviar ao TSE</button>
+    </div>
+    <span id="msgFeedbackAcao"></span>
+
+    <hr>
+
+    <div id="painelCandidato" class="card-candidato" style="display: none;">
+        <h3>Dados do Candidato Selecionado</h3>
+        <p><strong>Nome:</strong> <span id="infoNome">-</span></p>
+        <p><strong>Cargo:</strong> <span id="infoCargo">-</span></p>
+        <p><strong>Número:</strong> <span id="infoNumero">-</span></p>
+        <div>
+            <strong>Foto:</strong><br>
+            <img id="infoFoto" src="" alt="Foto do Candidato">
+        </div>
+    </div>
+
+    <h3>Candidaturas Registradas (Aguardando Envio)</h3>
+    <ul id="listaRegistrados">
+        <!-- Itens registrados serão exibidos aqui pelo estudante -->
+    </ul>
+
+</body>
+</html>

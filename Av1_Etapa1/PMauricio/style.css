@@ -1,0 +1,108 @@
+/* Configurações Globais e Layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Formulário e Entradas de Dados */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+    width: 320px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Cartão do Candidato Selecionado */
+.card-candidato {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 15px;
+    width: 320px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-candidato img {
+    max-width: 100%;
+    max-height: 200px;
+    height: auto;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+/* Regras, Erros e Feedbacks */
+.rules {
+    color: #0275d8;
+    font-size: 0.75em;
+    display: block;
+    margin-top: 5px;
+}
+
+.erro {
+    color: #d9534f;
+    font-size: 0.9em;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+.sucesso {
+    color: #5cb85c;
+    font-size: 0.9em;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Botões e Ações */
+.actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: opacity 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background-color: #2196F3;
+    color: white;
+}
+
+.btn-success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 1;
+}
